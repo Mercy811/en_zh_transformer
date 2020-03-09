@@ -6,6 +6,10 @@
 
 [train.py](train.py): several training methods
 
+[loadData.ipynb](loadData.ipynb): use torchtext to load dataset from disk, numericalize words, generate voacb, and batch them
+
+---
+
 ### training example
 
 [characterCopy.py](characterCopy.py): a simple copying experiment to test model 
