@@ -19,12 +19,15 @@
 
 ---
 
-### Chinese word embedding
+### pretrained Chinese word embedding
 
 Although there are several pretrained word embeddings, the segmentation methods can hugely affect the performance of embedding and downstream tasks. 
 
 | Name                                 | Format             | Algorithm   | Dimension |
 |--------------------------------------|--------------------|-------------|-----------|
 | [Tencent AI Lab Embedding Corpus for Chinese Words and Phrases](https://ai.tencent.com/ailab/nlp/embedding.html) | text (.txt) | DSG (directional skip-gram) | 200 |
-| [fastText](https://fasttext.cc/docs/en/crawl-vectors.html) | text (.txt) & binary (.bin) | skip-gram <br>(n=5, window=5, negative=10) | 300 |
-| [Wikipedia2Vec](https://wikipedia2vec.github.io/wikipedia2vec/pretrained/#chinese) | text (.txt) & binary (.bin) | skip-gram<br>(window=5, iteration=10, negative=15) | 100 & 300 |
+| [fastText](https://fasttext.cc/docs/en/crawl-vectors.html) | text (.txt) & binary (.bin) | CBOW <br>(n=5, window=5, negative=10) | 300 |
+| [Wikipedia2Vec](https://wikipedia2vec.github.io/wikipedia2vec/pretrained/#chinese) | text (.txt) & binary (.bin) | skip-gram<br>word-based<br>(window=5, iteration=10, negative=15) | 100 & 300 |
+
+
+fastText uses [Stanford Word Segmenter](https://nlp.stanford.edu/software/segmenter.html) for Chinese, the same toolkit I used to tokenize infoq corpus. Also fastText provides a easy to use tool (both skip-gram and CBOW are available) to generate your own embedding.
