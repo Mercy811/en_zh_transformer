@@ -7,3 +7,5 @@ iwslt.pt
 .DS_Store
 
 .vector_cache/
+
+.vscode/

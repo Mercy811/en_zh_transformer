@@ -19,5 +19,3 @@ pwd = os.getcwd()
 SRC.build_vocab(traindataset, vectors=vocab.Vectors(name='cc.en.300.vec', cache=pwd+'/.vector_cache'))
 TGT.build_vocab(traindataset, vectors=vocab.Vectors(name='cc.zh.300.vec', cache=pwd+'/.vector_cache'))
 
-print(SRC.vocab.stoi)
-print(TGT.vocab.stoi)

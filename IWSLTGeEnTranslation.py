@@ -120,7 +120,7 @@ class MultiGPULossCompute:
         return total * normalize
 
 # GPUs to use
-devices = [0, 1, 2, 3]
+devices = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 if True:
     pad_idx = TGT.vocab.stoi["<blank>"]
     model = make_model(len(SRC.vocab), len(TGT.vocab), N=6)
