@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta charset="utf-8" />
+{{ pagedown.include_pagedown() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+<title>MT</title>
+</head>
+<body>
+    <div class="content" style="width: 500px;">
+        <h1 background-color: #FCFCFC;>Machine Translation</h1>
+        <hr>
+        <br>
+        <form method="POST">
+        <div style="text-align:center;">
+        <label>Choose the source and target language pair:</label>
+        <select id="lang" name="lang">
+            <option value="en-fr">English-French</option>
+            <option value="fr-en" {% if language == "fr-en"%} selected {% endif %}>French-English</option>
+        </select>
+
+
+            {{ form.hidden_tag() }}
+            <div>
+                <p>{{ form.pagedown.label }}</p>
+                {{ form.pagedown(only_input=True, rows=10, class="textarea", style='width:100%') }}
+            </div>
+            <br>
+            <div>{{ form.submit(class="button") }}</div>
+        </form>
+        {% if text %}
+
+        <hr>
+
+        <div>
+            <p>Translation</p>
+            <div class="textarea">{{ text }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
