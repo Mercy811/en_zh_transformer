@@ -1,5 +1,4 @@
 ## File Introduction
----
 
 
 [data.py](data.py): preprocess datasets including loading, embedding, padding, and batch
@@ -12,7 +11,6 @@
 
 
 ## Training Example
----
 
 [characterCopy.py](characterCopy.py): a simple copying experiment to test model 
 
@@ -20,7 +18,6 @@
 
 
 ## Pretrained Chinese Word Embedding
----
 
 Although there are several pretrained word embeddings, the segmentation methods can hugely affect the performance of embedding and downstream tasks. 
 
@@ -37,7 +34,6 @@ fastText uses [Stanford Word Segmenter](https://nlp.stanford.edu/software/segmen
 
 
 ## Web Development
----
 
 [Machine Translation Web Interface for OpenNMT](https://blog.machinetranslation.io/opennmt-web-interface/)
 
