@@ -1,4 +1,6 @@
-##File Introduction
+## File Introduction
+---
+
 
 [data.py](data.py): preprocess datasets including loading, embedding, padding, and batch
 
@@ -9,14 +11,16 @@
 [loadData.ipynb](loadData.ipynb): use torchtext to load dataset from disk, numericalize words, generate voacb, and batch them
 
 
-##Training Example
+## Training Example
+---
 
 [characterCopy.py](characterCopy.py): a simple copying experiment to test model 
 
 [IWSLTGeEnTranslation.py](IWSLTGeEnTranslation.py): IWSLTG Ge-En experiment
 
 
-##Pretrained Chinese Word Embedding
+## Pretrained Chinese Word Embedding
+---
 
 Although there are several pretrained word embeddings, the segmentation methods can hugely affect the performance of embedding and downstream tasks. 
 
@@ -32,8 +36,8 @@ fastText uses [Stanford Word Segmenter](https://nlp.stanford.edu/software/segmen
 
 
 
-##Web Development
-
+## Web Development
+---
 
 [Machine Translation Web Interface for OpenNMT](https://blog.machinetranslation.io/opennmt-web-interface/)
 
