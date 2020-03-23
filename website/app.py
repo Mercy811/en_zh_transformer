@@ -22,7 +22,7 @@ def index():
     form = PageDownFormExample()
     text = None
     language = "en-fr" #Default
-    url = "http://0.0.0.0:5000/translator/translate"
+    url = "http://127.0.0.1:8080/translator/translate"
     if form.validate_on_submit():
         source = form.pagedown.data.lower()
         source = re.sub(r"([?.!,:;¿])", r" \1 ", source)
@@ -32,6 +32,8 @@ def index():
             id = 1
         elif language == "ende-transformer":
             id = 2
+        elif language == "enzh-rnn":
+            id = 3
         headers = {"Content-Type": "application/json"}
         data = [{"src": source, "id": id}]
         response = requests.post(url, json=data, headers=headers)
