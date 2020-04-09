@@ -34,6 +34,8 @@ def index():
             id = 2
         elif language == "enzh-rnn":
             id = 3
+        elif language == "enzh-transformer":
+            id = 4
         headers = {"Content-Type": "application/json"}
         data = [{"src": source, "id": id}]
         response = requests.post(url, json=data, headers=headers)

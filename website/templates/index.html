@@ -15,6 +15,7 @@
         <label>Choose the source and target language pair:</label>
         <select id="lang" name="lang">
             <option value="enzh-rnn">English-Chinese RNN</option>
+            <option value="enzh-transformer" {% if language == "enzh-transformer"%} selected {% endif %}>English-Chinese Transformer</option>
             <option value="ende-transformer" {% if language == "ende-transformer"%} selected {% endif %}>English-German Transformer</option>
             <option value="enzh-lstm" {% if language == "enzh-lstm"%} selected {% endif %}>English-German LSTM</option>
         </select>
